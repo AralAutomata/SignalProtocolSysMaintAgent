@@ -1,4 +1,4 @@
-# Mega Project: Signal-Protocol E2EE + SysMaint Agentic Operations
+# Signal-Protocol E2EE + SysMaint Agentic Operations
 
 This repository implements a local-first secure messaging and operations system that combines:
 
