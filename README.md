@@ -10,6 +10,7 @@ This repository implements a local-first secure messaging and operations system 
 The cryptographic primitives and protocol logic for transport-level E2EE come from libsignal. This repo does not reimplement Signal cryptography.
 
   cp .env.example .env
+  
   nano .env
 
   Set at least:
@@ -27,12 +28,15 @@ The cryptographic primitives and protocol logic for transport-level E2EE come fr
   Build local package artifacts (required from clean source):
 
   npm ci
+  
   npm run build
 
   Start full stack:
 
   docker compose down --remove-orphans
+  
   docker compose up -d --build relay sysmaint-agent diag-probe sysmaint-web
+  
   docker compose ps
 
   Test chat API:
@@ -44,7 +48,9 @@ The cryptographic primitives and protocol logic for transport-level E2EE come fr
   Open UI:
 
   - http://localhost:3000
+  
   - http://localhost:3000/chat
+  
   - http://localhost:3000/demo
 
   Useful logs:
