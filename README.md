@@ -15,9 +15,13 @@ The cryptographic primitives and protocol logic for transport-level E2EE come fr
   Set at least:
 
   OPENAI_API_KEY=your_openai_api_key
+  
   MEGA_PASSPHRASE=alpha
+  
   OPENAI_MODEL=gpt-4o-mini
+  
   OPENAI_INPUT_USD_PER_1M=0.15
+  
   OPENAI_OUTPUT_USD_PER_1M=0.60
 
   Build local package artifacts (required from clean source):
