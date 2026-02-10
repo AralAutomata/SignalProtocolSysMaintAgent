@@ -7,6 +7,8 @@ This repository implements a local-first secure messaging and operations system 
 - A SysMaint agent that receives encrypted telemetry and encrypted chat prompts, then responds using LangChain + OpenAI
 - A Next.js UI for dashboarding, AI chat, and Alice/Bob E2EE demo conversations
 
+![Alice Chat](alicechat.png)
+
 The cryptographic primitives and protocol logic for transport-level E2EE come from libsignal. This repo does not reimplement Signal cryptography.
 
   cp .env.example .env
@@ -61,6 +63,8 @@ The cryptographic primitives and protocol logic for transport-level E2EE come fr
 
   docker compose down
 
+  ![Alice Demo](alicedemo.png)
+
 ## Table Of Contents
 - Architecture Overview
 - Open-Source Libraries Used
@@ -76,6 +80,8 @@ The cryptographic primitives and protocol logic for transport-level E2EE come fr
 - Persistence Model
 - Troubleshooting
 - Security Notes And Production Hardening
+
+![Alice Dashboard](alicedashboard.png)
 
 ## Architecture Overview
 
