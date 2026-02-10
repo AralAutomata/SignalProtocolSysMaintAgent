@@ -1,0 +1,41 @@
+cp .env.example .env
+  nano .env
+
+  Set at least:
+
+  OPENAI_API_KEY=your_openai_api_key
+  MEGA_PASSPHRASE=alpha
+  OPENAI_MODEL=gpt-4o-mini
+  OPENAI_INPUT_USD_PER_1M=0.15
+  OPENAI_OUTPUT_USD_PER_1M=0.60
+
+  Build local package artifacts (required from clean source):
+
+  npm ci
+  npm run build
+
+  Start full stack:
+
+  docker compose down --remove-orphans
+  docker compose up -d --build relay sysmaint-agent diag-probe sysmaint-web
+  docker compose ps
+
+  Test chat API:
+
+  curl -sS -X POST http://localhost:3000/api/chat \
+    -H 'Content-Type: application/json' \
+    -d '{"prompt":"System status summary in one line."}'
+
+  Open UI:
+
+  - http://localhost:3000
+  - http://localhost:3000/chat
+  - http://localhost:3000/demo
+
+  Useful logs:
+
+  docker compose logs -f --tail=200 relay sysmaint-agent sysmaint-web diag-probe
+
+  Stop:
+
+  docker compose down
